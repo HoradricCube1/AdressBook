@@ -1,0 +1,57 @@
+public class addressbookExtended {
+    public static void main(String[] args) {
+      
+        Person p1 = new Person("Eda", "eda@gmail.com", "123-456-7890", "26");
+        p1.print();
+        Person p2 = new Person("Hannah", "hannah@gmail.com", "404-899-9955", "31");
+        p2.print();
+
+       
+        p1.updateEmail("yvuz@gmail.com");
+        p2.updateEmail("montana@gmail.com");
+    }
+}
+
+
+class Person {
+    // Instance variables
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String age;
+    // Task 1: Add a new attribute (e.g., age)
+
+    
+    public Person(String initName, String initEmail, String initPhone, String initAge) { 
+        name = initName;
+        email = initEmail;
+        phoneNumber = initPhone;
+        age =initAge;
+        // Task 3: Assign a default value to the new attribute here.
+    }
+
+    public void print() {
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Age: " + age);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getPhoneNumber(){
+        return phoneNumber;
+    }
+    public String getAge(){
+        return age;
+    }
+
+
+    public void updateEmail(String newEmail) {
+        email = newEmail;
+    }
+}
